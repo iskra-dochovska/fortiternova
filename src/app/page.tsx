@@ -9,7 +9,7 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="relative mx-auto max-w-6xl px-6 pt-20 pb-16 sm:pt-28 sm:pb-24">
-        <GalaxySpiral className="absolute -top-14 -right-20 z-0 h-56 w-56 opacity-30 sm:-top-28 sm:-right-32 sm:h-96 sm:w-96 sm:opacity-45 md:-top-40 md:-right-40 md:h-[560px] md:w-[560px] md:opacity-55 lg:-top-44 lg:-right-48 lg:h-[640px] lg:w-[640px] lg:opacity-60" />
+        <GalaxySpiral className="absolute -top-16 -right-28 z-0 h-[420px] w-[420px] opacity-30 sm:-top-28 sm:-right-40 sm:h-[640px] sm:w-[640px] sm:opacity-40 md:-top-44 md:-right-56 md:h-[880px] md:w-[880px] md:opacity-45 lg:-top-56 lg:-right-64 lg:h-[1100px] lg:w-[1100px] lg:opacity-50" />
 
         <div className="animate-fade-up relative z-10 flex flex-col items-center text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-1.5 text-xs font-medium text-foreground/70 backdrop-blur">

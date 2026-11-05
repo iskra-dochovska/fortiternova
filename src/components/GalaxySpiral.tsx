@@ -15,7 +15,7 @@ function Dots({ data, color }: { data: string; color: string }) {
 
 export default function GalaxySpiral({ className = "" }: { className?: string }) {
   return (
-    <div className={`animate-spin-slow pointer-events-none select-none ${className}`}>
+    <div className={`pointer-events-none select-none ${className}`}>
       <svg viewBox="0 0 400 400" className="h-full w-full overflow-visible">
         <defs>
           <radialGradient id="galaxy-core" cx="50%" cy="50%" r="50%">

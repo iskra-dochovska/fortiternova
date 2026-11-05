@@ -148,16 +148,3 @@ body {
 .animate-fade-up {
   animation: fade-up 0.7s ease-out both;
 }
-
-@keyframes spin-slow {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.animate-spin-slow {
-  animation: spin-slow 160s linear infinite;
-}
