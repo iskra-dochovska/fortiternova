@@ -22,14 +22,15 @@ export default function AboutPage() {
 
       <section className="mx-auto max-w-3xl px-6 pb-16 sm:pb-20">
         <div className="relative overflow-hidden rounded-2xl border border-nova-gold/30 bg-nova-gold/5 p-7 sm:p-9">
-          <Sparkle className="h-5 w-5 text-nova-gold" />
-          <p className="mt-4 text-base leading-7 text-foreground/75 sm:text-lg">
+          <p className="text-base leading-7 text-foreground/75 sm:text-lg">
+            <Sparkle className="mr-2 inline h-4 w-4 -translate-y-0.5 text-nova-gold" />
             &ldquo;<span className="text-nova-gold font-semibold">Fortiter</span>&rdquo; is
             Latin for <span className="text-nova-gold font-semibold">boldly</span>. A
             &ldquo;<span className="text-nova-gold font-semibold">nova</span>&rdquo; is a{" "}
             <span className="text-nova-gold font-semibold">new star being born</span>.
             Together they describe what we want for the studios we work with: to start with
             confidence, and to be seen.
+            <Sparkle className="ml-2 inline h-4 w-4 -translate-y-0.5 text-nova-gold" />
           </p>
         </div>
 
