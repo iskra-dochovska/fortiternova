@@ -2,13 +2,16 @@ import { Sparkles } from "lucide-react";
 import Button from "@/components/ui/Button";
 import { SERVICES, STATS, PROCESS_STEPS } from "@/lib/data";
 import { ICON_MAP } from "@/components/icon-map";
+import GalaxySpiral from "@/components/GalaxySpiral";
 
 export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="mx-auto max-w-6xl px-6 pt-20 pb-16 sm:pt-28 sm:pb-24">
-        <div className="animate-fade-up flex flex-col items-center text-center">
+      <section className="relative mx-auto max-w-6xl px-6 pt-20 pb-16 sm:pt-28 sm:pb-24">
+        <GalaxySpiral className="absolute -top-14 -right-20 z-0 h-56 w-56 opacity-30 sm:-top-28 sm:-right-32 sm:h-96 sm:w-96 sm:opacity-45 md:-top-40 md:-right-40 md:h-[560px] md:w-[560px] md:opacity-55 lg:-top-44 lg:-right-48 lg:h-[640px] lg:w-[640px] lg:opacity-60" />
+
+        <div className="animate-fade-up relative z-10 flex flex-col items-center text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-1.5 text-xs font-medium text-foreground/70 backdrop-blur">
             <Sparkles className="h-3.5 w-3.5 text-nova-cyan" />
             Mobile App Store Testing, Built for Launch Day
@@ -34,7 +37,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mx-auto mt-20 grid grid-cols-2 gap-6 rounded-2xl border border-white/10 bg-white/[0.02] p-8 backdrop-blur sm:grid-cols-4">
+        <div className="relative z-10 mx-auto mt-20 grid grid-cols-2 gap-6 rounded-2xl border border-white/10 bg-white/[0.02] p-8 backdrop-blur sm:grid-cols-4">
           {STATS.map((stat) => (
             <div key={stat.label} className="text-center">
               <p className="text-gradient-nova text-3xl font-bold sm:text-4xl">
