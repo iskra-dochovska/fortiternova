@@ -107,7 +107,7 @@ export default function Navbar() {
       <div
         onClick={() => setOpen(false)}
         aria-hidden="true"
-        className={`fixed inset-0 z-[100] bg-space-950/90 transition-opacity duration-300 md:hidden ${
+        className={`fixed inset-0 z-[100] bg-space-950/75 transition-opacity duration-300 md:hidden ${
           open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
         }`}
       />
