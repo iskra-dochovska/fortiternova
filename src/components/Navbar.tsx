@@ -4,8 +4,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import { ArrowRight, Mail, Menu, Orbit, X } from "lucide-react";
+import { ArrowRight, Mail, Menu, X } from "lucide-react";
 import { CONTACT_INFO, NAV_LINKS } from "@/lib/data";
+import LogoMark from "@/components/LogoMark";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -54,9 +55,7 @@ export default function Navbar() {
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center gap-2.5">
-          <span className="relative flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-nova-blue to-nova-purple shadow-[0_0_20px_-2px_rgba(99,102,241,0.8)]">
-            <Orbit className="h-5 w-5 text-white" strokeWidth={2.25} />
-          </span>
+          <LogoMark className="h-9 w-9 shrink-0 drop-shadow-[0_0_14px_rgba(99,102,241,0.6)]" />
           <span className="text-lg font-medium tracking-tight text-foreground">
             Fortiter<span className="text-gradient-nova font-semibold"> Nova</span>
           </span>
@@ -117,15 +116,12 @@ export default function Navbar() {
         role="dialog"
         aria-modal="true"
         aria-label="Site menu"
-        className={`fixed inset-y-0 right-0 z-[101] flex h-dvh w-[80%] max-w-xs flex-col border-l border-white/10 bg-space-950 shadow-[-24px_0_60px_-30px_rgba(99,102,241,0.5)] transition-transform duration-300 ease-out md:hidden ${
-          open ? "translate-x-0" : "translate-x-full"
-        }`}
+        className="fixed inset-y-0 z-[101] flex w-[80%] max-w-xs flex-col border-l border-white/10 bg-space-950 shadow-[-24px_0_60px_-30px_rgba(99,102,241,0.5)] transition-[right] duration-300 ease-out md:hidden"
+        style={{ right: open ? "0" : "-100%" }}
       >
         <div className="flex items-center justify-between border-b border-white/10 px-5 py-4">
           <Link href="/" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
-            <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-nova-blue to-nova-purple">
-              <Orbit className="h-4.5 w-4.5 text-white" strokeWidth={2.25} />
-            </span>
+            <LogoMark className="h-8 w-8 shrink-0" />
             <span className="text-base font-medium text-foreground">
               Fortiter<span className="text-gradient-nova font-semibold"> Nova</span>
             </span>

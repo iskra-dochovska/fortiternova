@@ -4,9 +4,9 @@ import ContactForm from "@/components/ContactForm";
 import { CONTACT_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Contact — Fortiter Nova",
+  title: "Contact | Fortiter Nova",
   description:
-    "Get in touch with Fortiter Nova to scope mobile app store testing for your next release.",
+    "Get in touch with Fortiter Nova to scope a right-sized ASO package for your game.",
 };
 
 const INFO_CARDS = [
@@ -26,8 +26,8 @@ export default function ContactPage() {
           Get in <span className="text-gradient-nova font-bold">touch</span>
         </h1>
         <p className="mt-5 text-foreground/60">
-          Tell us about your app and we&apos;ll get back to you within one business day
-          with next steps.
+          Tell us about your game and where you&apos;re at, and we&apos;ll get back to you
+          within one business day with next steps.
         </p>
       </div>
 
@@ -53,8 +53,8 @@ export default function ContactPage() {
           <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-space-800 via-space-700 to-space-800 p-6">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_0%,_rgba(99,102,241,0.25),_transparent_60%)]" />
             <p className="relative text-sm leading-6 text-foreground/60">
-              Prefer async? Send a message with your app details and target launch date —
-              we&apos;ll follow up with a scoped test plan.
+              Prefer async? Send a message with your game&apos;s store page and current stage,
+              and we&apos;ll follow up with a short, honest diagnostic.
             </p>
           </div>
         </div>

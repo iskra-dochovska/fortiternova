@@ -70,7 +70,7 @@ export default function ContactForm() {
           rows={5}
           value={form.message}
           onChange={(e) => setForm((f) => ({ ...f, message: e.target.value }))}
-          placeholder="Tell us about your app and what you need tested."
+          placeholder="Tell us about your game and your store page."
           className="w-full resize-none rounded-xl border border-white/10 bg-space-950/60 px-4 py-3 text-sm text-foreground placeholder:text-foreground/30 outline-none transition-colors focus:border-nova-blue-light/50"
         />
       </div>

@@ -16,6 +16,7 @@
   --color-nova-purple: #8b5cf6;
   --color-nova-purple-light: #a78bfa;
   --color-nova-magenta: #c026d3;
+  --color-nova-gold: #f7c948;
 }
 
 @theme inline {
@@ -35,6 +36,7 @@
   --color-nova-purple: var(--color-nova-purple);
   --color-nova-purple-light: var(--color-nova-purple-light);
   --color-nova-magenta: var(--color-nova-magenta);
+  --color-nova-gold: var(--color-nova-gold);
 }
 
 * {

@@ -1,18 +1,18 @@
 import {
-  ShieldCheck,
-  Smartphone,
-  Gauge,
-  Lock,
-  RefreshCw,
-  Workflow,
+  Search,
+  Images,
+  TrendingUp,
+  Globe,
+  Target,
+  FileBarChart2,
   type LucideIcon,
 } from "lucide-react";
 
 export const ICON_MAP: Record<string, LucideIcon> = {
-  ShieldCheck,
-  Smartphone,
-  Gauge,
-  Lock,
-  RefreshCw,
-  Workflow,
+  Search,
+  Images,
+  TrendingUp,
+  Globe,
+  Target,
+  FileBarChart2,
 };

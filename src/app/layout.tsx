@@ -12,9 +12,9 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Fortiter Nova — Mobile App Store Testing",
+  title: "Fortiter Nova | Right-Sized ASO for Small Studios",
   description:
-    "Fortiter Nova helps app teams ship with confidence through rigorous mobile app store testing, device compatibility, performance, and security validation.",
+    "Fortiter Nova is an app store optimization agency for small game studios: right-sized packages, honest testing, and plain-language reporting.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

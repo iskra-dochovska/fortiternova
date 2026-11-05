@@ -1,6 +1,7 @@
-import { Sparkles } from "lucide-react";
+import Link from "next/link";
+import { Sparkle } from "lucide-react";
 import Button from "@/components/ui/Button";
-import { SERVICES, STATS, PROCESS_STEPS } from "@/lib/data";
+import { SERVICES, VALUE_PROPS, PROCESS_STEPS } from "@/lib/data";
 import { ICON_MAP } from "@/components/icon-map";
 import GalaxySpiral from "@/components/GalaxySpiral";
 
@@ -13,40 +14,55 @@ export default function Home() {
 
         <div className="animate-fade-up relative z-10 flex flex-col items-center text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-1.5 text-xs font-medium text-foreground/70 backdrop-blur">
-            <Sparkles className="h-3.5 w-3.5 text-nova-cyan" />
-            Mobile App Store Testing, Built for Launch Day
+            <Sparkle className="h-3.5 w-3.5 text-nova-gold" />
+            App Store Optimization
           </span>
 
           <h1 className="mt-6 max-w-3xl text-4xl font-medium leading-tight tracking-tight sm:text-5xl md:text-6xl">
-            Ship mobile apps that
-            <span className="text-gradient-nova font-bold"> pass review</span> and
-            <span className="text-gradient-nova font-bold"> survive production</span>.
+            Your fair share of <span className="text-nova-gold">organic</span>.
           </h1>
 
+          <h2 className="mt-3 max-w-xl text-lg font-medium text-foreground/70 sm:text-xl">
+            Right-sized <span className="text-nova-gold">ASO</span> for small studios
+          </h2>
+
           <p className="mt-6 max-w-2xl text-base leading-7 text-foreground/60 sm:text-lg">
-            Fortiter Nova is a mobile app store testing partner for teams who can&apos;t
-            afford a failed submission or a crash in the wild. Compliance, compatibility,
-            performance, and security — validated before you hit publish.
+            Most small studios can&apos;t outspend the big publishers, and they shouldn&apos;t
+            have to. We help you make the most of the organic traffic already available,
+            with honest, right-sized packages built around your game, not a one-size template.
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <Button href="/projects">View Our Projects</Button>
-            <Button href="/contact" variant="secondary" showArrow={false}>
-              Get In Touch
-            </Button>
+            <Button href="/contact">Get In Touch</Button>
           </div>
         </div>
 
-        <div className="relative z-10 mx-auto mt-20 grid grid-cols-2 gap-6 rounded-2xl border border-white/10 bg-white/[0.02] p-8 backdrop-blur sm:grid-cols-4">
-          {STATS.map((stat) => (
-            <div key={stat.label} className="text-center">
-              <p className="text-gradient-nova text-3xl font-bold sm:text-4xl">
-                {stat.value}
-              </p>
-              <p className="mt-2 text-xs text-foreground/50 sm:text-sm">{stat.label}</p>
+        <div className="relative z-10 mx-auto mt-20 grid grid-cols-1 gap-6 rounded-2xl border border-white/10 bg-white/[0.02] p-8 backdrop-blur sm:grid-cols-2 lg:grid-cols-4">
+          {VALUE_PROPS.map((item) => (
+            <div key={item.label}>
+              <div className="flex items-center gap-2 text-sm font-semibold text-nova-gold">
+                <Sparkle className="h-4 w-4" strokeWidth={2} />
+                {item.label}
+              </div>
+              <p className="mt-2 text-xs leading-5 text-foreground/55">{item.description}</p>
             </div>
           ))}
         </div>
+      </section>
+
+      {/* Mission teaser */}
+      <section className="mx-auto max-w-4xl px-6 py-16 text-center sm:py-24">
+        <p className="text-xl font-medium leading-snug tracking-tight sm:text-2xl">
+          &ldquo;We build right-sized <span className="text-nova-gold">ASO</span> packages for
+          small studios: test carefully, report plainly, and tell you when ASO isn&apos;t what&apos;s
+          holding you back.&rdquo;
+        </p>
+        <Link
+          href="/about"
+          className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-nova-blue-light transition-colors hover:text-nova-cyan"
+        >
+          Learn more about us →
+        </Link>
       </section>
 
       {/* Services */}
@@ -56,8 +72,7 @@ export default function Home() {
             What We <span className="text-gradient-nova font-bold">Do</span>
           </h2>
           <p className="mt-4 text-foreground/60">
-            End-to-end QA coverage for mobile teams, from first build to store approval
-            and every release after.
+            A right-sized set of ASO services, scoped to your studio&apos;s budget and stage.
           </p>
         </div>
 
@@ -86,10 +101,10 @@ export default function Home() {
       <section className="mx-auto max-w-6xl px-6 py-16 sm:py-24">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-medium tracking-tight sm:text-4xl">
-            How It <span className="text-gradient-nova font-bold">Works</span>
+            How We <span className="text-gradient-nova font-bold">Work</span>
           </h2>
           <p className="mt-4 text-foreground/60">
-            A straightforward path from first contact to a store-ready release.
+            A short diagnostic, a right-sized package, and honest reporting at every step.
           </p>
         </div>
 
@@ -113,14 +128,14 @@ export default function Home() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,_rgba(99,102,241,0.25),_transparent_55%)]" />
           <div className="relative">
             <h2 className="text-3xl font-medium tracking-tight sm:text-4xl">
-              Ready to test before you launch?
+              Ready for a fair shot at being found?
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-foreground/60">
-              Tell us about your app and timeline — we&apos;ll put together a test plan
-              within one business day.
+              Tell us about your game and where you&apos;re at, and we&apos;ll start with a
+              short, honest diagnostic.
             </p>
             <div className="mt-8 flex justify-center">
-              <Button href="/contact">Start a Conversation</Button>
+              <Button href="/contact">Start the Conversation</Button>
             </div>
           </div>
         </div>

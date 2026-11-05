@@ -1,14 +1,13 @@
 export const NAV_LINKS = [
   { href: "/", label: "Home" },
-  { href: "/projects", label: "Projects" },
-  { href: "/contact", label: "Contact" },
+  { href: "/about", label: "About" },
 ];
 
-export const STATS = [
-  { value: "250+", label: "Apps tested" },
-  { value: "40+", label: "Device & OS profiles" },
-  { value: "99.9%", label: "Crash-free sessions" },
-  { value: "24–48h", label: "Typical turnaround" },
+export const VALUE_PROPS = [
+  { label: "Right-sized packages", description: "Scaled to your budget and stage, not a one-size template." },
+  { label: "Plain-language reporting", description: "Results explained clearly, including the tests that didn't work." },
+  { label: "Hypothesis-driven testing", description: "Every change we make starts with a clear, testable reason." },
+  { label: "Honest about limits", description: "We'll tell you when ASO isn't what's holding your game back." },
 ];
 
 export type Service = {
@@ -19,109 +18,49 @@ export type Service = {
 
 export const SERVICES: Service[] = [
   {
-    icon: "ShieldCheck",
-    title: "App Store Compliance",
+    icon: "Search",
+    title: "Keyword Research & Optimization",
     description:
-      "Pre-submission audits against Apple App Store and Google Play guidelines, so your release doesn't stall in review.",
+      "Finding the search terms your players actually use, and getting your store listing found for them.",
   },
   {
-    icon: "Smartphone",
-    title: "Device & OS Compatibility",
+    icon: "Images",
+    title: "Store Page Creative Testing",
     description:
-      "Testing across real device matrices and OS versions to confirm your app performs everywhere your users are.",
+      "Icon, screenshots, and preview video tested with a clear hypothesis, not a guess dressed up as a redesign.",
   },
   {
-    icon: "Gauge",
-    title: "Performance & Load Testing",
+    icon: "TrendingUp",
+    title: "Conversion Rate Optimization",
     description:
-      "Stress-testing under real-world conditions to catch crashes, memory leaks, and slowdowns before launch day.",
+      "Turning more of the visitors you already get into installs, without paying for extra traffic.",
   },
   {
-    icon: "Lock",
-    title: "Security & Privacy Audits",
+    icon: "Globe",
+    title: "Localization",
     description:
-      "Identifying vulnerabilities and privacy gaps to keep user data safe and your app aligned with store policy.",
+      "Adapting your store presence for the markets where your genre already finds an audience.",
   },
   {
-    icon: "RefreshCw",
-    title: "Regression & Release Testing",
+    icon: "Target",
+    title: "Competitive & Market Analysis",
     description:
-      "Continuous coverage through every release cycle, so new features ship without breaking what already works.",
+      "A clear-eyed read on where your store page stands against the games you're actually competing with.",
   },
   {
-    icon: "Workflow",
-    title: "Automated Test Pipelines",
+    icon: "FileBarChart2",
+    title: "Diagnostics & Reporting",
     description:
-      "Custom automation frameworks wired into your CI/CD for faster, repeatable QA on every build.",
+      "A short, honest read on what's achievable for your game, and plain-language results on every test we run.",
   },
 ];
 
 export const PROCESS_STEPS = [
-  { title: "Submit", description: "Share your app, build, and target platforms with our team." },
-  { title: "Scope", description: "We map a test plan to your release timeline and risk areas." },
-  { title: "Test", description: "Our engineers run manual and automated passes across real devices." },
-  { title: "Report", description: "You get a clear, prioritized breakdown of every issue found." },
-  { title: "Ship", description: "Fix, retest, and launch with confidence in the store of your choice." },
-];
-
-export type Project = {
-  name: string;
-  platform: string;
-  category: string;
-  description: string;
-};
-
-export const PROJECT_CATEGORIES = [
-  "All",
-  "App Store Compliance",
-  "Compatibility",
-  "Performance",
-  "Security",
-];
-
-export const PROJECTS: Project[] = [
-  {
-    name: "Nimbus Fitness",
-    platform: "iOS / Android",
-    category: "Compatibility",
-    description:
-      "Full device and OS compatibility sweep across 35+ profiles ahead of a global launch.",
-  },
-  {
-    name: "Pulse Banking",
-    platform: "iOS",
-    category: "Security",
-    description:
-      "Security and privacy audit plus App Store compliance review ahead of a major relaunch.",
-  },
-  {
-    name: "Driftly Travel",
-    platform: "Android",
-    category: "App Store Compliance",
-    description:
-      "Automated regression suite integrated into the CI/CD pipeline to protect every release.",
-  },
-  {
-    name: "Orbit Social",
-    platform: "Android",
-    category: "Compatibility",
-    description:
-      "Compatibility testing across 40+ Android devices spanning five OS versions.",
-  },
-  {
-    name: "Lumen Health",
-    platform: "iOS / Android",
-    category: "Performance",
-    description:
-      "Load and performance testing for a telehealth app ahead of peak enrollment season.",
-  },
-  {
-    name: "Vantage Retail",
-    platform: "iOS",
-    category: "App Store Compliance",
-    description:
-      "Resubmission support and compliance remediation after an App Store guideline rejection.",
-  },
+  { title: "Diagnostic", description: "A short, honest read on your store page, budget, and stage." },
+  { title: "Package", description: "A right-sized plan built around what your game actually needs." },
+  { title: "Test", description: "We run changes against a clear hypothesis, not a hunch." },
+  { title: "Report", description: "Plain-language results, including the tests that didn't work." },
+  { title: "Iterate", description: "We keep going, or tell you honestly when the bottleneck is elsewhere." },
 ];
 
 export const CONTACT_INFO = {
