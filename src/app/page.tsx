@@ -1,69 +1,127 @@
-import Image from "next/image";
+import { Sparkles } from "lucide-react";
+import Button from "@/components/ui/Button";
+import { SERVICES, STATS, PROCESS_STEPS } from "@/lib/data";
+import { ICON_MAP } from "@/components/icon-map";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
+    <>
+      {/* Hero */}
+      <section className="mx-auto max-w-6xl px-6 pt-20 pb-16 sm:pt-28 sm:pb-24">
+        <div className="animate-fade-up flex flex-col items-center text-center">
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-1.5 text-xs font-medium text-foreground/70 backdrop-blur">
+            <Sparkles className="h-3.5 w-3.5 text-nova-cyan" />
+            Mobile App Store Testing, Built for Launch Day
+          </span>
+
+          <h1 className="mt-6 max-w-3xl text-4xl font-medium leading-tight tracking-tight sm:text-5xl md:text-6xl">
+            Ship mobile apps that
+            <span className="text-gradient-nova font-bold"> pass review</span> and
+            <span className="text-gradient-nova font-bold"> survive production</span>.
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+
+          <p className="mt-6 max-w-2xl text-base leading-7 text-foreground/60 sm:text-lg">
+            Fortiter Nova is a mobile app store testing partner for teams who can&apos;t
+            afford a failed submission or a crash in the wild. Compliance, compatibility,
+            performance, and security — validated before you hit publish.
+          </p>
+
+          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+            <Button href="/projects">View Our Projects</Button>
+            <Button href="/contact" variant="secondary" showArrow={false}>
+              Get In Touch
+            </Button>
+          </div>
+        </div>
+
+        <div className="mx-auto mt-20 grid grid-cols-2 gap-6 rounded-2xl border border-white/10 bg-white/[0.02] p-8 backdrop-blur sm:grid-cols-4">
+          {STATS.map((stat) => (
+            <div key={stat.label} className="text-center">
+              <p className="text-gradient-nova text-3xl font-bold sm:text-4xl">
+                {stat.value}
+              </p>
+              <p className="mt-2 text-xs text-foreground/50 sm:text-sm">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Services */}
+      <section className="mx-auto max-w-6xl px-6 py-16 sm:py-24">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl font-medium tracking-tight sm:text-4xl">
+            What We <span className="text-gradient-nova font-bold">Do</span>
+          </h2>
+          <p className="mt-4 text-foreground/60">
+            End-to-end QA coverage for mobile teams, from first build to store approval
+            and every release after.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {SERVICES.map((service) => {
+            const Icon = ICON_MAP[service.icon];
+            return (
+              <div
+                key={service.title}
+                className="group relative rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-nova-purple-light/40 hover:bg-white/[0.04]"
+              >
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-nova-blue/20 to-nova-purple/20 text-nova-blue-light transition-colors group-hover:text-nova-cyan">
+                  <Icon className="h-5.5 w-5.5" strokeWidth={1.75} />
+                </div>
+                <h3 className="mt-5 text-lg font-medium">{service.title}</h3>
+                <p className="mt-2.5 text-sm leading-6 text-foreground/55">
+                  {service.description}
+                </p>
+              </div>
+            );
+          })}
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Process */}
+      <section className="mx-auto max-w-6xl px-6 py-16 sm:py-24">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl font-medium tracking-tight sm:text-4xl">
+            How It <span className="text-gradient-nova font-bold">Works</span>
+          </h2>
+          <p className="mt-4 text-foreground/60">
+            A straightforward path from first contact to a store-ready release.
+          </p>
+        </div>
+
+        <div className="relative mt-16 grid grid-cols-1 gap-10 sm:grid-cols-5">
+          <div className="absolute left-0 right-0 top-6 hidden h-px bg-gradient-to-r from-nova-cyan via-nova-blue to-nova-purple sm:block" />
+          {PROCESS_STEPS.map((step, i) => (
+            <div key={step.title} className="relative flex flex-col items-center text-center">
+              <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-space-900 text-sm font-semibold text-nova-blue-light">
+                {i + 1}
+              </div>
+              <h3 className="mt-4 text-sm font-medium">{step.title}</h3>
+              <p className="mt-2 text-xs leading-5 text-foreground/50">{step.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="mx-auto max-w-6xl px-6 pb-24">
+        <div className="border-glow relative overflow-hidden rounded-3xl bg-gradient-to-br from-space-800 via-space-700 to-space-800 px-8 py-14 text-center sm:px-16">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,_rgba(99,102,241,0.25),_transparent_55%)]" />
+          <div className="relative">
+            <h2 className="text-3xl font-medium tracking-tight sm:text-4xl">
+              Ready to test before you launch?
+            </h2>
+            <p className="mx-auto mt-4 max-w-xl text-foreground/60">
+              Tell us about your app and timeline — we&apos;ll put together a test plan
+              within one business day.
+            </p>
+            <div className="mt-8 flex justify-center">
+              <Button href="/contact">Start a Conversation</Button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
